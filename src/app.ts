@@ -1,11 +1,14 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import { Sequelize } from 'sequelize';
+import clubRouter from './routes/clubs/club.routes';
 
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.json());
+app.use('/clubs', clubRouter);
+
 
 //TODO Hacerlo en database.ts y llamarlo desde aca
 //#region Sequelize
