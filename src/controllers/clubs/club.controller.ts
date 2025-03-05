@@ -7,7 +7,7 @@ import ClubService from "../../services/clubs/club.service";
     //     this.clubService = new ClubService();
     // }
 
-    const clubService = new ClubService();
+     const clubService = new ClubService();
 
    export const getAllClubs = async (req: any, res: any) =>{
         try {
