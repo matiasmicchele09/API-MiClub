@@ -24,9 +24,4 @@ const ClubModel = sequelize.define('clubs', {
 }
 );
 
-ClubModel.hasMany(UserModel,{
-    foreignKey: 'id_club',
-    sourceKey: 'id'
-});
-
 export default ClubModel;

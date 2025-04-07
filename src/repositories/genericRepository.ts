@@ -16,12 +16,12 @@ export default class GenericRepository{
     async getById(id: number){
         return await this.model.findByPk(id);
     }
-/*
-    async create(data){
+
+    async create(data: any){
         return this.model.create(data);
     }
 
-    async update(id, data){
+  /*  async update(id, data){
         return this.model.update(data, {where: {id}});
     }
 

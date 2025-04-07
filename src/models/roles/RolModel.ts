@@ -20,9 +20,4 @@ const RolModel = sequelize.define('roles', {
 }
 );
 
-RolModel.hasMany(UserModel,{
-    foreignKey: 'id_club',
-    sourceKey: 'id'
-});
-
 export default RolModel;    

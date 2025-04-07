@@ -27,11 +27,11 @@ const UserModel = sequelize.define('users', {
         allowNull: false,
     },
     id_rol:{
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     id_club:{
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
     }  
 }
@@ -40,15 +40,5 @@ const UserModel = sequelize.define('users', {
     timestamps: false
 }
 );
-
-UserModel.belongsTo(ClubModel,{
-    foreignKey: 'id_club',
-    targetKey: 'id'
-})
-
-UserModel.belongsTo(RolModel,{
-    foreignKey: 'id_rol',
-    targetKey: 'id'
-})
               
 export default UserModel;
