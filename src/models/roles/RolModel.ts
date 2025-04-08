@@ -2,20 +2,16 @@ import { sequelize } from '../../config/database';
 import { DataTypes } from 'sequelize';
 import UserModel from '../users/UserModel';
 
-const ClubModel = sequelize.define('clubs', {
+const RolModel = sequelize.define('roles', {
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,        
     },
-    name: {
+    rol: {
         type: DataTypes.STRING,
         allowNull: false,                
-    },
-    city:{
-        type: DataTypes.STRING,
-        allowNull: false,
     }    
 }
 ,{
@@ -24,4 +20,4 @@ const ClubModel = sequelize.define('clubs', {
 }
 );
 
-export default ClubModel;
+export default RolModel;    
