@@ -2,12 +2,14 @@ import dotenv from 'dotenv';
 import express from 'express';
 import { Sequelize } from 'sequelize';
 import clubRouter from './routes/clubs/club.routes';
+import authRouter from './routes/auth/auth.routes';
 
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use('/clubs', clubRouter);
+app.use('/auth', authRouter); 
 
 
 //TODO Hacerlo en database.ts y llamarlo desde aca
